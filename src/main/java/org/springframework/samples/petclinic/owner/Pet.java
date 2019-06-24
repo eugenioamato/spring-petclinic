@@ -50,7 +50,7 @@ import org.springframework.samples.petclinic.visit.Visit;
 public class Pet extends NamedEntity {
     //static final Long serialVersionUID=0L;
     @Column(name = "birth_date")
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
     @ManyToOne
@@ -68,7 +68,7 @@ public class Pet extends NamedEntity {
         this.birthDate = birthDate;
     }
 
-    LocalDate getBirthDate() {
+    public LocalDate getBirthDate() {
         return this.birthDate;
     }
 
